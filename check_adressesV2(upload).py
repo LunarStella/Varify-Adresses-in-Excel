@@ -56,7 +56,7 @@ def validate_address(address, client_id, client_secret):
 # 엑셀 파일 로드
 workbook = load_workbook(filename=current_file)
 # Sheet1 시트 선택
-sheet = workbook['Sheet1']
+sheet = workbook[current_file]
 
 
 df = pd.read_excel(current_file, sheet_name = current_sheet, usecols = [column-1], header = None, engine = 'openpyxl')
